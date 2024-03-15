@@ -1,7 +1,7 @@
 ##  Meat Statistical Data Microfrontend
 
 ### Responsability 
-- Displaying statistical data related to meat consumption and prodution in the user's region.
+- Displays statistical data related to meat consumption and prodution in the user's region.
 
 ### Why it should be a microfrontend
 - This microfrontend focuses solely on presenting statistical data, keeping its codebase simple and manageable.

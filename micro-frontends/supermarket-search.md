@@ -1,6 +1,7 @@
 ##  Supermarket Search Microfrontend
 
 ### Responsability 
+- Allows the user to search for a supermarket to see its meat products.
 
 ### Why it should be a microfrontend
 - This microfrontend focuses solely on providing supermarket search functionality, making it simple and easy to maintain.
@@ -16,6 +17,8 @@
 - Provides a vertical service layer specifically for searching and accessing information about supermarkets and meat products.
 
 ### Suggestions of improvement
-- Integrate Google location API to allow user to select a supermarket location by putting a pin on a map.
-- Add search filters by area, or by a specific type of meat (which may not happen to be available at all supermarkets).
-- Add location based recommendations.
+- Integrate Google location API where the user is allowed to open a map and select a supermarket location by putting a pin in it.
+
+- Add search filters by area, or by a specific type of meat (which may not happen to be available at all supermarkets) which makes it an interesting feature to add.
+
+- Add location based recommendations since right now the location is static, only showing supermarkets from a certain area.

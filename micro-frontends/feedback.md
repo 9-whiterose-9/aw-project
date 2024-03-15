@@ -1,6 +1,7 @@
 ##  Product's Feedback Microfrontend
 
 ### Responsability 
+- Allows a user to see the feedback given by other people of a specific product where he also can leave its rating of the product.
 
 ### Why it should be a microfrontend
 - This microfrontend focuses solely on collecting and displaying feedback, keeping its codebase simple and manageable.
@@ -16,4 +17,4 @@
 - Provides a vertical service layer specifically for collecting and managing user feedback for meat products.
 
 ### Suggestions of improvement
-- Improving rating system by allowing for users to comment on their feedback.
+- Improving rating system by allowing for users to make text comments on their feedback.
