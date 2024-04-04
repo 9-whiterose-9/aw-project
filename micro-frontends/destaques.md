@@ -4,7 +4,7 @@
 - Allows a user to see the trending meat products at the moment.
 
 ### Why it should be a microfrontend
-- This microfrontend focuses only on loading and displaying to the user the currently trending meat products, therefore serving only one purpose.
+- This microfrontend focuses on loading and displaying to the user the currently trending meat products, therefore serving only one purpose.
 
 - Its standalone nature allows for independent scaling, which is critical for performance optimization, especially if these products change frequently and receive a high volume of views.
 
