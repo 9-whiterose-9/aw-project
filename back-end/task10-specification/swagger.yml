@@ -147,7 +147,7 @@ paths:
           description: Product deleted successfully
         '404':
           description: Product not found
-    /users/{user_id}/favorites:
+  /users/{user_id}/favorites:
     get:
       tags:
         - Favorite Products Management
@@ -313,6 +313,18 @@ paths:
 
 components:
   schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        username:
+          type: string
+        email:
+          type: string
+        fullName:
+          type: string
     Product:
       type: object
       properties:
@@ -325,6 +337,10 @@ components:
           type: number
         description:
           type: string
+    ProductList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Product'
     FavoritesList:
       type: array
       items:
@@ -359,4 +375,3 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/Product'
-
