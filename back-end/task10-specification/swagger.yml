@@ -6,6 +6,97 @@ info:
 servers:
   - url: 'https://api.qrmeat.com/'
 paths:
+  /authentication:
+    post:
+      tags:
+        - Authentication
+      summary: User login
+      requestBody:
+        description: User login credentials
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Authentication successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  auth_key:
+                    type: string
+  /authentication/{auth_key}:
+    put:
+      tags:
+        - Authentication
+      summary: Update password
+      parameters:
+        - name: auth_key
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: New password
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Password updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  auth_token:
+                    type: string
+    get:
+      tags:
+        - Authentication
+      summary: Validate auth token
+      parameters:
+        - name: auth_key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Token is valid
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  auth_valid:
+                    type: boolean
+    delete:
+      tags:
+        - Authentication
+      summary: Logout
+      parameters:
+        - name: auth_key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Logout successful
   /users/{user_id}:
     get:
       tags:
